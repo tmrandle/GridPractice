@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Practice</title>
+<!-- CSS only This links to the BootStrap CSS library -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!--This links to my main stylesheet-->
+<link href="styles/main.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <main id="main" class="container">
+        <header class="topBar">
+            <h1>The Hilltop Caf&#233;</h1>
+            <nav>
+                <ul>
+                    <li><a href="/gitHub/GridPractice/index.html">Home</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Our Menu</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="mainFood"><!--This is the section for the main foods-->
+            <section>
+                <h2>Homemade Foods</h2>
+                <img src="/gitHub/GridPractice/assests/images/potatoSoup3.jpg" alt="Potato Soup">
+                <p>We make delicious homemade foods.  We partner with local farmers and producers to use fresh, in season, local produce.  Come in to experience how good fresh tastes.</p>
+            </section>
+        </div>
+
+        <section id="otherPages"> <!--Section to take you to the other pages-->
+            <h3>Links to our Beverages and Desserts</h3>
+            <a class="otherPages2" href="/gitHub/GridPractice/beverages.html" target="_self">Beverages Page</a> 
+              <!--This will take you to the beverages page-->
+              
+            <a class="otherPages2" href="/gitHub/GridPractice/dessert.html" target="self">Dessert Page</a>
+              <!--This will take you to the dessert page-->
+        </section>
+
+        <section> <!--This section is for the main food items.-->
+            <article class="foods">
+               <h3>Sandwiches</h3>
+                  <p>Sandwiches made with <em>fresh</em> ingredients.  Try some of them today.</p>
+                   <dl>
+                     <dt><b>Turkey</b></dt>
+                       <dd>A turkey sandwich with Swiss cheese, pickles, and lettuce.</dd>
+                       <dt><b>Ham</b></dt>
+                       <dd>A Ham sandwich with cheddar cheese, onions, and tomatoes.</dd>
+                       <dt><b>Grilled Cheese</b></dt>
+                       <dd>Melted Cheese on nicely toasted bread.</dd>
+                   </dl> 
+            </article>
+            
+            <article class="foods">
+                <h3>Soups</h3>
+                  <p>Great on a <i>cold</i> day.</p>
+                    <dl>
+                      <dt><b>Loaded Baked Potato</b></dt>
+                        <dd>Creamy baked potato, corn, colby cheese and bacon.</dd>
+                        <dt><b>Chicken Tortilla Soup</b></dt>
+                        <dd>Spicy tomato and broth based chicken soup.</dd>
+                   </dl>
+            </article>
+        </section>
+
+        <aside id="additionalInfo"> <!--Interesting additional info or facts-->
+            <h4>Information about some of our Local Farmers.</h4>
+              <p>Meet some of our local farmers, dairy producers, and beekeepers.  These people work hard to provide the quality produce.  The Smith Farm has Jersey cows that produce rich tasting milk and cheeses.  Their farm practices also take the environment into account.</p>
+              <p>Coming soon to some of our desserts, fresh strawberries from Poteet. Yum!</p>
+              <p>Search for local farms on the following site.</p>
+              <a href="https://www.google.com/?gws_rd=ssl" target="_blank">Google Website</a>
+        </aside>
+
+        <aside id="download">
+            <p>Our Menu is available for you to download.</p>
+            <p id="menu">Menu Section</p>
+            <a id="menu2" href="" download>Hilltop Cafe&#769; Menu</a>
+        </aside>
+
+        <footer>&#169; 2020  Hilltop Cafe&#769; All rights reserved.</footer>
+
+
+    </main> <!--Ending of container-->
+
+
+   
+    <!-- JavaScript Bundle with Popper This links to the BootStrap JQuery and J Popper Libraries for interaction-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
