@@ -2,3 +2,29 @@
 @import "./partials/_colors";
 @import "./partials/_text";
 @import "./partials/_mixins";
+
+header {
+
+     display: grid;
+     grid-template-rows: 100px 80px;
+     grid-template-columns: 1fr;
+     justify-content: center;
+     align-items: center;
+
+    .cafeName {
+        background-color: $headerBackColor;
+        height: 100px;
+        width: 1fr;
+        h1{
+        font-family: $cafeNameFont;
+        color: $cafeNameColor;
+        text-align: center;
+        }
+    }
+     .nav {
+        // height: 50px;
+        // width: 1fr;
+        background-color: rgb(15, 111, 189);
+        
+        }
+}

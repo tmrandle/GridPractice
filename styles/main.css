@@ -341,4 +341,35 @@ template {
 [hidden] {
   display: none;
 }
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100px 80px;
+      grid-template-rows: 100px 80px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .cafeName {
+  background-color: lightslategray;
+  height: 100px;
+  width: 1fr;
+}
+
+header .cafeName h1 {
+  font-family: "Courgette", cursive;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+header .nav {
+  background-color: #0f6fbd;
+}
 /*# sourceMappingURL=main.css.map */
