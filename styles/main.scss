@@ -11,8 +11,7 @@
       display: grid;
       grid-template-rows: 100px auto;
       grid-template-columns: 1fr;
-      //thought this would work with a separate grid for content.  trying to combine them in next attempt
-   
+     
     .cafeName {
         background-color: $headerBackColor;
         height: 100px;
@@ -98,11 +97,46 @@
           align-items: center;
       }
 
-
-
   } //ending bracket .content
 
+//this section for medium screen sizes and up
+@media (min-width: 992px){
+    .content{
+    display: grid;
+    grid-template-rows: 400px auto 300px 90px;
+    grid-template-columns: 3fr 1fr;
+    gap: 5px;
+    grid-template-areas: 
+       "hero hero"
+       "mainFood otherPages"
+       "aside aside2"
+       "footer footer";
+    justify-content: center;
+    align-items: center;
 
+    .mainFood{
+        grid-area: hero;
+    }
+    .otherPages{
+        height: 100%;
+        grid-area: otherPages;
+    }
+    .foodList{
+        grid-area: mainFood;
+    }
+    .additionalInfo{
+        grid-area: aside;
+    }
+    .download{
+        height: 100%;
+        grid-area: aside2;
+    }
+    footer{
+        grid-area: footer;
+    }
+
+    }//content
+} //ending bracket for @media
 
 
 
