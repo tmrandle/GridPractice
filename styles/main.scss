@@ -3,14 +3,16 @@
 @import "./partials/_text";
 @import "./partials/_mixins";
 
-header {
 
-     display: grid;
-     grid-template-rows: 100px 80px;
-     grid-template-columns: 1fr;
-     justify-content: center;
-     align-items: center;
 
+   
+
+   header {
+      display: grid;
+      grid-template-rows: 100px auto;
+      grid-template-columns: 1fr;
+      //thought this would work with a separate grid for content.  trying to combine them in next attempt
+   
     .cafeName {
         background-color: $headerBackColor;
         height: 100px;
@@ -21,10 +23,86 @@ header {
         text-align: center;
         }
     }
+
      .navColor {
-        // height: 50px;
-        // width: 1fr;
-        background-color: rgb(199, 87, 53);
+        height: auto;
+        background-color: $navBackColor;
         
         }
-}
+    }//  ending bracket for header
+
+  .content{
+    display: grid;
+    grid-template-rows:400px 180px auto 300px 140px 80px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "otherPages"
+      "mainFood"
+      "aside"
+      "aside2"
+      "footer";
+     justify-content: center;
+     align-items: center;
+
+      .mainFood{
+          height: 400px;
+          width: 100%;
+          background-color: $darkBackground;
+          grid-area: hero;
+      }
+
+      .otherPages{
+        height: 180px;
+        width: 100%;
+        background-color: $lightBackground;
+        grid-area: otherPages;
+        h3{
+            margin: 20px;
+        }
+        .otherPages2{
+            @include button();
+        }
+
+      }
+
+      .foodList{
+          background-color: $darkBackground;
+          grid-area: mainFood;
+         
+      }
+
+      .additionalInfo{
+          height: 300px;
+          width: 100%;
+          background-color: $lightBackground;
+          grid-area: aside;
+      }
+
+      .download{
+          height: 140px;
+          width: 100%;
+          background-color: $darkBackground;
+          grid-area: aside2;
+      }
+
+      footer{
+          height: 80px;
+          width: 100%;
+          background-color: $navBackColor;
+          grid-area: footer;
+          color: $lightText;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+
+
+  } //ending bracket .content
+
+
+
+
+

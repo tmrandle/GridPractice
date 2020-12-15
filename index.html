@@ -14,11 +14,11 @@
 <body>
     <main id="main" class="container">
 
-        <header class="topBar">
+        <header class="topBar">  <!--This section is for the comp name and navigation header-->
             <div class="cafeName">
              <h1>The Hilltop Caf&#233;</h1>
             <div>
-
+                <!--This is a responsive navbar with hamburger menu from Bootstrap 4-->
                 <nav class="nav navbar navbar-expand-lg navbar-dark navColor">
                     <div class="container-fluid">
                       <!-- <a class="navbar-brand" href="#">Navbar</a> -->
@@ -40,7 +40,8 @@
             
         </header>
 
-        <div class="mainFood"><!--This is the section for the main foods-->
+      <div class="content">
+        <div class="mainFood"><!--This is the section for the main foods--Hero Section-->
             <section>
                 <h2>Homemade Foods</h2>
                 <img src="/gitHub/GridPractice/assests/images/potatoSoup3.jpg" alt="Potato Soup">
@@ -48,7 +49,7 @@
             </section>
         </div>
 
-        <section id="otherPages"> <!--Section to take you to the other pages-->
+        <section class="otherPages"> <!--Section to take you to the other pages-->
             <h3>Links to our Beverages and Desserts</h3>
             <a class="otherPages2" href="/gitHub/GridPractice/beverages.html" target="_self">Beverages Page</a> 
               <!--This will take you to the beverages page-->
@@ -57,7 +58,7 @@
               <!--This will take you to the dessert page-->
         </section>
 
-        <section> <!--This section is for the main food items.-->
+        <section class="foodList"> <!--This section is for the main food items.-->
             <article class="foods">
                <h3>Sandwiches</h3>
                   <p>Sandwiches made with <em>fresh</em> ingredients.  Try some of them today.</p>
@@ -83,7 +84,7 @@
             </article>
         </section>
 
-        <aside id="additionalInfo"> <!--Interesting additional info or facts-->
+        <aside class="additionalInfo"> <!--Interesting additional info or facts-->
             <h4>Information about some of our Local Farmers.</h4>
               <p>Meet some of our local farmers, dairy producers, and beekeepers.  These people work hard to provide the quality produce.  The Smith Farm has Jersey cows that produce rich tasting milk and cheeses.  Their farm practices also take the environment into account.</p>
               <p>Coming soon to some of our desserts, fresh strawberries from Poteet. Yum!</p>
@@ -91,14 +92,15 @@
               <a href="https://www.google.com/?gws_rd=ssl" target="_blank">Google Website</a>
         </aside>
 
-        <aside id="download">
+        <aside class="download">
             <p>Our Menu is available for you to download.</p>
             <p id="menu">Menu Section</p>
             <a id="menu2" href="" download>Hilltop Cafe&#769; Menu</a>
         </aside>
+      
 
         <footer>&#169; 2020  Hilltop Cafe&#769; All rights reserved.</footer>
-
+      </div> <!--the ending div for content-->
 
     </main> <!--Ending of container-->
 
