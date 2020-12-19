@@ -373,8 +373,8 @@ header .navColor {
 .content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 400px 180px auto 300px 140px 80px;
-      grid-template-rows: 400px 180px auto 300px 140px 80px;
+  -ms-grid-rows: 480px 180px auto 380px 180px 80px;
+      grid-template-rows: 480px 180px auto 380px 180px 80px;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
       grid-template-areas: "hero" "otherPages" "mainFood" "aside" "aside2" "footer";
@@ -387,12 +387,46 @@ header .navColor {
 }
 
 .content .mainFood {
-  height: 400px;
+  height: 480px;
   width: 100%;
+  margin: 20px 0px;
+  padding: 25px;
   background-color: ivory;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: hero;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .mainFood .image img {
+  margin: 0px;
+  border-radius: 20px;
+}
+
+.content .mainFood .image figcaption {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: -10px;
+}
+
+.content .mainFood .text h2 {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.content .mainFood .text p {
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .content .otherPages {
@@ -402,13 +436,37 @@ header .navColor {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: otherPages;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .content .otherPages h3 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin: 20px;
+  font-family: "Merriweather Sans", sans-serif;
+  text-align: center;
 }
 
-.content .otherPages .otherPages2 {
+.content .otherPages .buttons {
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+}
+
+.content .otherPages .buttons .otherPages2 {
   height: 25px;
   width: 125px;
   margin: 0px 20px;
@@ -421,7 +479,7 @@ header .navColor {
   border-radius: 10px;
 }
 
-.content .otherPages .otherPages2:hover {
+.content .otherPages .buttons .otherPages2:hover {
   background-color: #db6d4c;
   cursor: pointer;
 }
@@ -431,24 +489,95 @@ header .navColor {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: mainFood;
+  padding: 25px;
+}
+
+.content .foodList h3 {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.content .foodList p {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.content .foodList dt {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.content .foodList dd {
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .content .additionalInfo {
-  height: 300px;
+  height: 380px;
   width: 100%;
   background-color: #c3d7df;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: aside;
+  padding: 25px;
+}
+
+.content .additionalInfo h4 {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.content .additionalInfo p {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.content .additionalInfo a {
+  height: 25px;
+  width: 125px;
+  margin: 0px 20px;
+  padding: 18px;
+  color: #f5f5f5;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  background-color: #d75c37;
+  border-radius: 10px;
+}
+
+.content .additionalInfo a:hover {
+  background-color: #db6d4c;
+  cursor: pointer;
 }
 
 .content .download {
-  height: 140px;
+  height: 180px;
   width: 100%;
   background-color: ivory;
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: aside2;
+  padding: 25px;
+}
+
+.content .download h4 {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.content .download p {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.content .download a {
+  height: 25px;
+  width: 125px;
+  margin: 0px 20px;
+  padding: 18px;
+  color: #f5f5f5;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  background-color: #d75c37;
+  border-radius: 10px;
+}
+
+.content .download a:hover {
+  background-color: #db6d4c;
+  cursor: pointer;
 }
 
 .content footer {
@@ -469,16 +598,17 @@ header .navColor {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 @media (min-width: 992px) {
   .content {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 400px auto 300px 90px;
-        grid-template-rows: 400px auto 300px 90px;
-    -ms-grid-columns: 3fr 1fr;
-        grid-template-columns: 3fr 1fr;
+    -ms-grid-rows: 380px auto 300px 90px;
+        grid-template-rows: 380px auto 300px 90px;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
     gap: 5px;
         grid-template-areas: "hero hero" "mainFood otherPages" "aside aside2" "footer footer";
     -webkit-box-pack: center;
@@ -489,16 +619,65 @@ header .navColor {
             align-items: center;
   }
   .content .mainFood {
+    height: 380px;
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: hero;
+    margin: 0px;
+    padding: 5px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content .mainFood .image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .content .mainFood .image img {
+    margin: 0px;
+    border-radius: 20px;
+  }
+  .content .mainFood .image figcaption {
+    font-family: "Noto Sans JP", sans-serif;
+    margin: -10px;
+  }
+  .content .mainFood .text {
+    -webkit-box-flex: 1.5;
+        -ms-flex: 1.5;
+            flex: 1.5;
+    margin: 0px 20px;
+    padding: 15px;
+  }
+  .content .mainFood .text h2 {
+    font-family: "Merriweather Sans", sans-serif;
+  }
+  .content .mainFood .text p {
+    font-family: "Noto Sans JP", sans-serif;
+    text-align: left;
   }
   .content .otherPages {
     height: 100%;
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: otherPages;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .content .foodList {
     -ms-grid-row: 2;

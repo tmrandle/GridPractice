@@ -32,7 +32,7 @@
 
   .content{
     display: grid;
-    grid-template-rows:400px 180px auto 300px 140px 80px;
+    grid-template-rows: 480px 180px auto 380px 180px 80px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "hero"
@@ -45,44 +45,118 @@
      align-items: center;
 
       .mainFood{
-          height: 400px;
+          height: 480px;
           width: 100%;
+          margin: 20px 0px;
+          padding: 25px;
           background-color: $darkBackground;
           grid-area: hero;
-      }
+          text-align: center;
+        //   display: grid;  This worked about the same as the flex and was more complicated
+        //   grid-template-rows: 200px  200px;
+        //   grid-template-columns: 1fr;
+          display: flex;
+          flex-flow: column;
+          justify-content: space-evenly;
+          align-items: center;
+          .image{
+              img{
+              margin: 0px;
+              border-radius: 20px;
+              }
+              figcaption{
+              font-family: $smallText;
+              margin: -10px;
+              }
+          }
+          .text{
+              h2{
+              font-family: $largeText;
+              }
+              p{
+              font-family: $smallText;
+              }
+          }
+      } //mainFood
 
       .otherPages{
         height: 180px;
         width: 100%;
         background-color: $lightBackground;
         grid-area: otherPages;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
         h3{
+            flex: 1;
             margin: 20px;
+            font-family: $largeText;
+            text-align: center;
         }
-        .otherPages2{
-            @include button();
+        .buttons{
+            flex: 1.5;
+            .otherPages2{
+                @include button();
+            }
         }
+        
 
       }
 
       .foodList{
           background-color: $darkBackground;
           grid-area: mainFood;
+          padding: 25px;
+          h3{
+              font-family: $largeText;
+          }
+          p{
+              font-family: $smallText;
+            }
+          dt{
+              font-family: $largeText;
+          }
+          dd{
+              font-family: $smallText;
+          }
+          
          
       }
 
       .additionalInfo{
-          height: 300px;
+          height: 380px;
           width: 100%;
           background-color: $lightBackground;
           grid-area: aside;
+          padding: 25px;
+          h4{
+              font-family: $largeText;
+          }
+          p{
+              font-family: $smallText;
+          }
+          a{
+              @include button();
+          }
+
       }
 
       .download{
-          height: 140px;
+          height: 180px;
           width: 100%;
           background-color: $darkBackground;
           grid-area: aside2;
+          padding: 25px;
+          h4{
+              font-family: $largeText;
+          }
+          p{
+              font-family: $smallText;
+          }
+          a{
+              @include button();
+          }
       }
 
       footer{
@@ -95,16 +169,17 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          font-family: $smallText;
       }
 
   } //ending bracket .content
 
-//this section for medium screen sizes and up
+//this section for large screen sizes and up
 @media (min-width: 992px){
     .content{
     display: grid;
-    grid-template-rows: 400px auto 300px 90px;
-    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 380px auto 300px 90px;
+    grid-template-columns: 2fr 1fr;
     gap: 5px;
     grid-template-areas: 
        "hero hero"
@@ -115,11 +190,49 @@
     align-items: center;
 
     .mainFood{
+        height: 380px;
         grid-area: hero;
+        margin: 0px;
+        padding: 5px;
+          flex-flow: row ;
+          justify-content: flex-start;
+          align-items: center;
+          .image{
+              flex: 1;
+              img{
+              margin: 0px;
+              border-radius: 20px;
+              }
+              figcaption{
+              font-family: $smallText;
+              margin: -10px;
+              }
+          }
+          .text{
+              flex: 1.5;
+              margin: 0px 20px;
+              padding: 15px;
+              h2{
+              font-family: $largeText;
+              }
+              p{
+              font-family: $smallText;
+              text-align: left;
+              }
+            }
     }
     .otherPages{
         height: 100%;
         grid-area: otherPages;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // .buttons{
+        //     display: flex;
+        //     flex-flow: column;
+        //     justify-content: space-around;
+        // }
+        
     }
     .foodList{
         grid-area: mainFood;
