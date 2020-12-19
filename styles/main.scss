@@ -9,38 +9,55 @@
 
    header {
       display: grid;
-      grid-template-rows: 100px auto;
+      grid-template-rows: 150px auto;
       grid-template-columns: 1fr;
      
-    .cafeName {
+      .cafeName {
         background-color: $headerBackColor;
-        height: 100px;
+        // text-shadow: 1px 1px darkgray;
+        height: 150px;
         width: 1fr;
         h1{
         font-family: $cafeNameFont;
+        font-size: $cafeTextSize;
         color: $cafeNameColor;
         text-align: center;
         }
-    }
+      }
 
-     .navColor {
+      .navColor {
         height: auto;
-        background-color: $navBackColor;
-        
-        }
+        background-color: $navBackColor;       
+       }
     }//  ending bracket for header
 
+    footer{
+        // display: grid;
+        // grid-template-rows: 80px;
+        // grid-template-columns: 1fr;
+        height: 80px;
+        width: 100%;
+        background-color: $navBackColor;
+        color: $lightText;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $smallText;
+    }
+
   .content{
+    gap: 3px;
+    background-color: $lightBackground;
     display: grid;
-    grid-template-rows: 480px 180px auto 380px 180px 80px;
+    grid-template-rows: 480px 180px auto 380px 180px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "hero"
       "otherPages"
       "mainFood"
       "aside"
-      "aside2"
-      "footer";
+      "aside2";
      justify-content: center;
      align-items: center;
 
@@ -52,9 +69,7 @@
           background-color: $darkBackground;
           grid-area: hero;
           text-align: center;
-        //   display: grid;  This worked about the same as the flex and was more complicated
-        //   grid-template-rows: 200px  200px;
-        //   grid-template-columns: 1fr;
+ 
           display: flex;
           flex-flow: column;
           justify-content: space-evenly;
@@ -82,7 +97,7 @@
       .otherPages{
         height: 180px;
         width: 100%;
-        background-color: $lightBackground;
+        background-color: $darkBackground;
         grid-area: otherPages;
         display: flex;
         flex-flow: column;
@@ -108,6 +123,9 @@
           background-color: $darkBackground;
           grid-area: mainFood;
           padding: 25px;
+          .foods{
+              padding: 7px;
+          }
           h3{
               font-family: $largeText;
           }
@@ -127,7 +145,7 @@
       .additionalInfo{
           height: 380px;
           width: 100%;
-          background-color: $lightBackground;
+          background-color: $darkBackground;
           grid-area: aside;
           padding: 25px;
           h4{
@@ -159,96 +177,91 @@
           }
       }
 
-      footer{
-          height: 80px;
-          width: 100%;
-          background-color: $navBackColor;
-          grid-area: footer;
-          color: $lightText;
-          text-align: center;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-family: $smallText;
-      }
+     
 
   } //ending bracket .content
 
+ 
+
 //this section for large screen sizes and up
 @media (min-width: 992px){
+    .navColor{
+        li{
+            padding: 0px 15px;
+        }
+    }
     .content{
+    background-color: $lightBackground;
+    padding: 15px 10px 10px 10px;
     display: grid;
-    grid-template-rows: 380px auto 300px 90px;
+    grid-template-rows: 380px auto 350px;
     grid-template-columns: 2fr 1fr;
     gap: 5px;
     grid-template-areas: 
        "hero hero"
        "mainFood otherPages"
-       "aside aside2"
-       "footer footer";
+       "aside aside2";
     justify-content: center;
     align-items: center;
 
     .mainFood{
         height: 380px;
-        grid-area: hero;
+        border-radius: 10px;
         margin: 0px;
         padding: 5px;
+        grid-area: hero;
           flex-flow: row ;
           justify-content: flex-start;
           align-items: center;
           .image{
               flex: 1;
-              img{
-              margin: 0px;
-              border-radius: 20px;
-              }
-              figcaption{
-              font-family: $smallText;
-              margin: -10px;
-              }
-          }
+            }
+          
           .text{
               flex: 1.5;
               margin: 0px 20px;
               padding: 15px;
-              h2{
-              font-family: $largeText;
-              }
-              p{
-              font-family: $smallText;
+            p {
               text-align: left;
               }
-            }
+          }
     }
     .otherPages{
         height: 100%;
+        border-radius: 10px;
         grid-area: otherPages;
+     
+       .buttons{ 
         display: flex;
-        justify-content: center;
-        align-items: center;
-        // .buttons{
-        //     display: flex;
-        //     flex-flow: column;
-        //     justify-content: space-around;
-        // }
+        flex-flow: row wrap;
+        justify-content: center;    
+        }
         
     }
     .foodList{
         grid-area: mainFood;
+        border-radius: 10px;
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        .foods{
+            padding: 15px;
+        }
     }
     .additionalInfo{
+        height: 100%;
+        border-radius: 10px;
         grid-area: aside;
     }
     .download{
         height: 100%;
+        border-radius: 10px;
         grid-area: aside2;
     }
-    footer{
-        grid-area: footer;
-    }
+   
 
-    }//content
+    }//
+   
 } //ending bracket for @media
 
 

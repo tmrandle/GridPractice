@@ -347,20 +347,21 @@ template {
 header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100px auto;
-      grid-template-rows: 100px auto;
+  -ms-grid-rows: 150px auto;
+      grid-template-rows: 150px auto;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
 }
 
 header .cafeName {
   background-color: #4e565c;
-  height: 100px;
+  height: 150px;
   width: 1fr;
 }
 
 header .cafeName h1 {
   font-family: "Courgette", cursive;
+  font-size: 2.5rem;
   color: #f5f5f5;
   text-align: center;
 }
@@ -370,14 +371,34 @@ header .navColor {
   background-color: #d75c37;
 }
 
+footer {
+  height: 80px;
+  width: 100%;
+  background-color: #d75c37;
+  color: #f5f5f5;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
 .content {
+  gap: 3px;
+  background-color: #c3d7df;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 480px 180px auto 380px 180px 80px;
-      grid-template-rows: 480px 180px auto 380px 180px 80px;
+  -ms-grid-rows: 480px 180px auto 380px 180px;
+      grid-template-rows: 480px 180px auto 380px 180px;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-      grid-template-areas: "hero" "otherPages" "mainFood" "aside" "aside2" "footer";
+      grid-template-areas: "hero" "otherPages" "mainFood" "aside" "aside2";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -432,7 +453,7 @@ header .navColor {
 .content .otherPages {
   height: 180px;
   width: 100%;
-  background-color: #c3d7df;
+  background-color: ivory;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: otherPages;
@@ -467,19 +488,19 @@ header .navColor {
 }
 
 .content .otherPages .buttons .otherPages2 {
-  height: 25px;
+  height: 40px;
   width: 125px;
   margin: 0px 20px;
-  padding: 18px;
+  padding: 10px;
   color: #f5f5f5;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   text-decoration: none;
   background-color: #d75c37;
   border-radius: 10px;
 }
 
-.content .otherPages .buttons .otherPages2:hover {
+.content .otherPages .buttons .otherPages2:hover, .content .otherPages .buttons .otherPages2:focus {
   background-color: #db6d4c;
   cursor: pointer;
 }
@@ -490,6 +511,10 @@ header .navColor {
   -ms-grid-column: 1;
   grid-area: mainFood;
   padding: 25px;
+}
+
+.content .foodList .foods {
+  padding: 7px;
 }
 
 .content .foodList h3 {
@@ -511,7 +536,7 @@ header .navColor {
 .content .additionalInfo {
   height: 380px;
   width: 100%;
-  background-color: #c3d7df;
+  background-color: ivory;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: aside;
@@ -527,19 +552,19 @@ header .navColor {
 }
 
 .content .additionalInfo a {
-  height: 25px;
+  height: 40px;
   width: 125px;
   margin: 0px 20px;
-  padding: 18px;
+  padding: 10px;
   color: #f5f5f5;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   text-decoration: none;
   background-color: #d75c37;
   border-radius: 10px;
 }
 
-.content .additionalInfo a:hover {
+.content .additionalInfo a:hover, .content .additionalInfo a:focus {
   background-color: #db6d4c;
   cursor: pointer;
 }
@@ -563,54 +588,38 @@ header .navColor {
 }
 
 .content .download a {
-  height: 25px;
+  height: 40px;
   width: 125px;
   margin: 0px 20px;
-  padding: 18px;
+  padding: 10px;
   color: #f5f5f5;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   text-decoration: none;
   background-color: #d75c37;
   border-radius: 10px;
 }
 
-.content .download a:hover {
+.content .download a:hover, .content .download a:focus {
   background-color: #db6d4c;
   cursor: pointer;
 }
 
-.content footer {
-  height: 80px;
-  width: 100%;
-  background-color: #d75c37;
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
-  grid-area: footer;
-  color: #f5f5f5;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: "Noto Sans JP", sans-serif;
-}
-
 @media (min-width: 992px) {
+  .navColor li {
+    padding: 0px 15px;
+  }
   .content {
+    background-color: #c3d7df;
+    padding: 15px 10px 10px 10px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 380px auto 300px 90px;
-        grid-template-rows: 380px auto 300px 90px;
+    -ms-grid-rows: 380px auto 350px;
+        grid-template-rows: 380px auto 350px;
     -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
     gap: 5px;
-        grid-template-areas: "hero hero" "mainFood otherPages" "aside aside2" "footer footer";
+        grid-template-areas: "hero hero" "mainFood otherPages" "aside aside2";
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -620,12 +629,13 @@ header .navColor {
   }
   .content .mainFood {
     height: 380px;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 5px;
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: hero;
-    margin: 0px;
-    padding: 5px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -642,14 +652,6 @@ header .navColor {
         -ms-flex: 1;
             flex: 1;
   }
-  .content .mainFood .image img {
-    margin: 0px;
-    border-radius: 20px;
-  }
-  .content .mainFood .image figcaption {
-    font-family: "Noto Sans JP", sans-serif;
-    margin: -10px;
-  }
   .content .mainFood .text {
     -webkit-box-flex: 1.5;
         -ms-flex: 1.5;
@@ -657,49 +659,60 @@ header .navColor {
     margin: 0px 20px;
     padding: 15px;
   }
-  .content .mainFood .text h2 {
-    font-family: "Merriweather Sans", sans-serif;
-  }
   .content .mainFood .text p {
-    font-family: "Noto Sans JP", sans-serif;
     text-align: left;
   }
   .content .otherPages {
     height: 100%;
+    border-radius: 10px;
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: otherPages;
+  }
+  .content .otherPages .buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .content .foodList {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: mainFood;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .content .foodList .foods {
+    padding: 15px;
   }
   .content .additionalInfo {
+    height: 100%;
+    border-radius: 10px;
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: aside;
   }
   .content .download {
     height: 100%;
+    border-radius: 10px;
     -ms-grid-row: 3;
     -ms-grid-column: 2;
     grid-area: aside2;
-  }
-  .content footer {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: footer;
   }
 }
 /*# sourceMappingURL=main.css.map */
